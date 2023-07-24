@@ -1,30 +1,7 @@
 [
     {
         "title": "Test Title",
-        "text": "Test text"
-    },
-    {
-        "title": "asd",
-        "text": "asd"
-    },
-    {
-        "title": "asd",
-        "text": "asd"
-    },
-    {
-        "title": "asd",
-        "text": "asd"
-    },
-    {
-        "title": "asdd",
-        "text": "asdd"
-    },
-    {
-        "title": "pop",
-        "text": "pop"
-    },
-    {
-        "title": "ed",
-        "text": "ed"
+        "text": "Test text",
+        "id":"dsad"
     }
 ]
