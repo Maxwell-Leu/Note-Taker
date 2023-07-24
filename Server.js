@@ -21,15 +21,22 @@ app.get('/api/notes', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 })
 
-app.post('/api/notes', (req, res) => {
-    console.info(`${req.method} request received to add a tip`);
+app.get('/api/notes', (req, res) => {
+    console.info(`${req.method} request received to add a note`);
 
-    const{ username, topic, tip } = req.body;
+    const{title, text } = req.body;
 
     if (req.body){
-        
+        const newNote = {
+            title,
+            text,
+        }
+        readAndAppend(newNote, './db/db.json');
+        res.json('Note added');
+    }else{
+        res.errored('Error in adding tip');
     }
-})
+});
 
 app.listen(PORT, () =>
     console.log(`App listening at http://localhost:${PORT}`)
