@@ -21,7 +21,7 @@ app.get('/api/notes', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 })
 
-app.get('/api/notes', (req, res) => {
+app.post('/api/notes', (req, res) => {
     console.info(`${req.method} request received to add a note`);
 
     const{title, text } = req.body;
@@ -32,7 +32,7 @@ app.get('/api/notes', (req, res) => {
             text,
         }
         readAndAppend(newNote, './db/db.json');
-        res.json('Note added');
+        res.json(`Note added successfully`)
     }else{
         res.errored('Error in adding tip');
     }
