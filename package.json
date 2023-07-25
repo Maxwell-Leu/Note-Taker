@@ -8,11 +8,15 @@
     "start":"node server.js"
   },
   "keywords": [
+    "example",
     "heroku"
   ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4"
+  },
+  "engines": {
+    "node": "16.16.0"
   }
 }
