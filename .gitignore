@@ -1,3 +1,4 @@
 /node_modules
 npm-deug.log
 .DS_Store
+/*.env

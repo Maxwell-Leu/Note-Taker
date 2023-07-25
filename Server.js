@@ -1,7 +1,7 @@
 const express =require('express');
 const path = require('path');
 const api = require('./routes/index');
-const PORT = 8080;
+const PORT = process.env.PORT ||8080;
 const app = express();
 
 app.use(express.json());
@@ -19,5 +19,5 @@ app.get('/notes', (req , res) =>
 );
 
 app.listen(PORT, () =>
-    console.log(`App listening at port: ${PORT}`)
-);
+  console.log(`App listening at port: ${PORT}`
+));
